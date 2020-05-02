@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import {Component} from '@angular/core';
+import {BreakpointObserver} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,5 +7,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+  }
 }
