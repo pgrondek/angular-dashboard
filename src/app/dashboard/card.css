@@ -1,9 +1,7 @@
 .dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  display: block;
+  min-width: 500px;
+  margin: 15px;
 }
 
 .dashboard-card-content {

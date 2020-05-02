@@ -13,7 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
 import {WeatherComponent} from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatMenuModule,
     MatIconModule,
     HttpClientModule,
-    MatButtonModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
