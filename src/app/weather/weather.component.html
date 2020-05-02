@@ -1,0 +1,24 @@
+<mat-card class="dashboard-card">
+  <mat-card-title>
+    {{weather?.name}}
+  </mat-card-title>
+  <mat-card-content class="dashboard-card-content">
+    <div>
+      <mat-icon svgIcon="{{weather?.icon}}"
+                class="weather-icon"></mat-icon><br/>
+      {{weather?.description}}
+    </div>
+    <mat-grid-list cols="2" rowHeight="30px">
+      <mat-grid-tile>Temperature</mat-grid-tile>
+      <mat-grid-tile>
+        {{weather?.temperature.temperature}} °C
+      </mat-grid-tile>
+      <mat-grid-tile>Humidity</mat-grid-tile>
+      <mat-grid-tile>{{weather?.humidity}}%</mat-grid-tile>
+      <mat-grid-tile>Pressure</mat-grid-tile>
+      <mat-grid-tile> {{weather?.pressure}} hPa</mat-grid-tile>
+      <mat-grid-tile>Wind</mat-grid-tile>
+      <mat-grid-tile>{{weather?.windSpeed}} kmph</mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>

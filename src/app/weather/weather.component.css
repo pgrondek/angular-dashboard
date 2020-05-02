@@ -1,0 +1,10 @@
+@import "../dashboard/card.css";
+
+.mat-grid-tile {
+  font-size: 1.5rem;
+}
+
+.weather-icon {
+  height: 100px;
+  width:  100px;
+}

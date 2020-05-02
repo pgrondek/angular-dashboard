@@ -1,4 +1,4 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -10,14 +10,17 @@ import {MatCardModule} from '@angular/material/card';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+import {WeatherComponent} from './weather/weather.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClockComponent,
-    DashboardComponent
+    DashboardComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +32,14 @@ import {MatButtonModule} from '@angular/material/button';
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
+    HttpClientModule,
     MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+  }
 }
